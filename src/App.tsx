@@ -1,7 +1,9 @@
 import React from "react";
 
+import Router from "Router";
+
 const App = () => {
-  return <div>Viniciussslima-ui</div>;
+  return <Router />;
 };
 
 export default App;
