@@ -1,0 +1,22 @@
+.code-block {
+  background-color: #282a36;
+  color: white;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.code-block pre {
+  margin-right: 20px;
+}
+
+.clipboard,
+.clipboard-check {
+  font-size: 1.5rem;
+}
+
+.clipboard {
+  cursor: pointer;
+}
