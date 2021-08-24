@@ -1,9 +1,9 @@
-import React, { ReactNode, FC, useState } from "react";
+import React, { ReactNode, FC, useState, useCallback } from "react";
 import "./styles.css";
 
 import { Navbar, Drawer, List, ListItem } from "viniciussslima";
 import { MdMenu } from "react-icons/md";
-import { useCallback } from "react";
+import { useHistory } from "react-router-dom";
 
 interface BaseProps {
   children: ReactNode;
@@ -11,6 +11,8 @@ interface BaseProps {
 
 const Base: FC<BaseProps> = ({ children }) => {
   const [isDrawerOpen, setIsDraweOpen] = useState(false);
+
+  const history = useHistory();
 
   const openDrawer = useCallback(() => {
     setIsDraweOpen(true);
@@ -27,10 +29,10 @@ const Base: FC<BaseProps> = ({ children }) => {
       </Navbar>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <List>
-          <ListItem onClick={closeDrawer}>How install</ListItem>
+          <ListItem onClick={() => history.push("/")}>How to install</ListItem>
         </List>
       </Drawer>
-      {children}
+      <div className="content">{children}</div>
     </div>
   );
 };
