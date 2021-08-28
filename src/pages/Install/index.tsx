@@ -7,9 +7,9 @@ const Install = () => {
     <>
       <h1>How to install</h1>
       <p>To install just run the follow command in your project</p>
-      <CodeBlock text="yarn add viniciussslima" />
+      <CodeBlock text="yarn add viniciussslima" type="bash" />
       <p>or</p>
-      <CodeBlock text="npm i viniciussslima" />
+      <CodeBlock text="npm i viniciussslima" type="bash" />
     </>
   );
 };

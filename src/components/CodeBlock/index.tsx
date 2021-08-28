@@ -1,14 +1,16 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, useEffect } from "react";
 import "./styles.css";
 
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { FaClipboardList, FaClipboardCheck } from "react-icons/fa";
-import { useEffect } from "react";
 
 interface CodeBlockProps {
   text: string;
+  type: string;
 }
 
-const CodeBlock: FC<CodeBlockProps> = ({ text }) => {
+const CodeBlock: FC<CodeBlockProps> = ({ text, type }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   useEffect(() => {
@@ -25,7 +27,17 @@ const CodeBlock: FC<CodeBlockProps> = ({ text }) => {
 
   return (
     <div className="code-block">
-      <pre>{text}</pre>
+      <SyntaxHighlighter
+        language={type}
+        style={a11yDark}
+        customStyle={{
+          background: "none",
+          margin: "0px 50px 0px 0px",
+          padding: 0,
+        }}
+      >
+        {text}
+      </SyntaxHighlighter>
       {!isCopied ? (
         <FaClipboardList className="clipboard" onClick={copyToClipboard} />
       ) : (
