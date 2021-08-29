@@ -15,7 +15,7 @@
     "react-scripts": "4.0.3",
     "react-syntax-highlighter": "^15.4.4",
     "typescript": "^4.3.5",
-    "viniciussslima": "^0.2.11",
+    "viniciussslima": "^0.2.13",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
