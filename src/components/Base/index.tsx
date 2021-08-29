@@ -29,7 +29,24 @@ const Base: FC<BaseProps> = ({ children }) => {
       </Navbar>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <List>
-          <ListItem onClick={() => history.push("/")}>How to install</ListItem>
+          <ListItem
+            onClick={() => {
+              history.push("/");
+              closeDrawer();
+            }}
+          >
+            How to install
+          </ListItem>
+          <List title="Components" collapsible>
+            <ListItem
+              onClick={() => {
+                history.push("/carrossel");
+                closeDrawer();
+              }}
+            >
+              Carrossel
+            </ListItem>
+          </List>
         </List>
       </Drawer>
       <div className="content">{children}</div>
