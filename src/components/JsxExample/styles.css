@@ -1,0 +1,10 @@
+.jsx-example-title {
+  display: flex;
+  align-items: center;
+}
+
+.show-button {
+  cursor: pointer;
+  margin-left: 10px;
+  vertical-align: middle;
+}
