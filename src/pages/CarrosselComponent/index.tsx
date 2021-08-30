@@ -4,6 +4,8 @@ import { Carrossel, CarrosselItem } from "viniciussslima";
 
 import JsxExample from "components/JsxExample";
 import { minifyExample, example } from "./example";
+import Table from "components/Table";
+import props from "./props";
 
 const CarrosselComponent: FC = () => {
   return (
@@ -42,6 +44,8 @@ const CarrosselComponent: FC = () => {
         </CarrosselItem>
       </Carrossel>
       <JsxExample jsx={example} minifyJsx={minifyExample} />
+      <h3>Props</h3>
+      <Table data={props} />
     </>
   );
 };
