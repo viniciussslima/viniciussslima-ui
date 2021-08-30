@@ -11244,10 +11244,10 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-viniciussslima@^0.2.13:
-  version "0.2.13"
-  resolved "https://registry.yarnpkg.com/viniciussslima/-/viniciussslima-0.2.13.tgz#c3dc89f1c0e9b33473b175c9fc40fdfee6a57973"
-  integrity sha512-YwYfvIqaRQTE2iPZRmxbxDDDQyxr6wXSo7A3gn78rfPs9ikP624RT/YJAM6kC1ZVFtl+HbHvSKlDUD/fS+LoKQ==
+viniciussslima@^0.2.14:
+  version "0.2.14"
+  resolved "https://registry.yarnpkg.com/viniciussslima/-/viniciussslima-0.2.14.tgz#c188043c177f0ebe36840419fcefc96ee376edde"
+  integrity sha512-hVu0Q+3rfy6J0faDPYFkJkU0TUI9Zkhi7cQQ4uI80DVuiRERbG9Tmqp1kKQ+sQC+UCdEXYXP2SZm7SeHJK41OQ==
   dependencies:
     "@testing-library/jest-dom" "^5.11.4"
     "@testing-library/react" "^11.1.0"
