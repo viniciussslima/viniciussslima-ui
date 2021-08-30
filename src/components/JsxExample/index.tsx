@@ -8,21 +8,17 @@ import CodeBlock from "components/CodeBlock";
 
 interface JsxExampleProps {
   jsx: string;
-  minifyJsx: string;
+  reducedJsx: string;
 }
 
-const JsxExample: FC<JsxExampleProps> = ({ jsx, minifyJsx }) => {
+const JsxExample: FC<JsxExampleProps> = ({ jsx, reducedJsx }) => {
   const [showCode, setShowCode] = useState(false);
 
   return (
     <>
       <div className="jsx-example-title">
         <h3>Code example</h3>
-        <Tooltip
-          message={
-            showCode ? "Mostrar código reduzido" : "Mostrar código completo"
-          }
-        >
+        <Tooltip message={showCode ? "Show reduced code" : "Show full code"}>
           <BsCode
             className="show-button"
             onClick={() => setShowCode(!showCode)}
@@ -32,7 +28,7 @@ const JsxExample: FC<JsxExampleProps> = ({ jsx, minifyJsx }) => {
       {showCode ? (
         <CodeBlock text={jsx} type="jsx" />
       ) : (
-        <CodeBlock text={minifyJsx} type="jsx" />
+        <CodeBlock text={reducedJsx} type="jsx" />
       )}
     </>
   );

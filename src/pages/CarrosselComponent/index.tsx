@@ -43,7 +43,7 @@ const CarrosselComponent: FC = () => {
           3
         </CarrosselItem>
       </Carrossel>
-      <JsxExample jsx={example} minifyJsx={minifyExample} />
+      <JsxExample jsx={example} reducedJsx={minifyExample} />
       <h3>Props</h3>
       <Table data={props} />
     </>
