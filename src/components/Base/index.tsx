@@ -5,6 +5,8 @@ import { Navbar, Drawer, List, ListItem } from "viniciussslima";
 import { MdMenu } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 
+import logo from "assets/logo.png";
+
 interface BaseProps {
   children: ReactNode;
 }
@@ -28,26 +30,43 @@ const Base: FC<BaseProps> = ({ children }) => {
         <MdMenu className="menu-button" onClick={openDrawer} />
       </Navbar>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
-        <List>
-          <ListItem
-            onClick={() => {
-              history.push("/");
-              closeDrawer();
+        <>
+          <div
+            style={{
+              position: "absolute",
+              top: 10,
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            How to install
-          </ListItem>
-          <List title="Components" collapsible>
+            <img
+              src={logo}
+              alt="logo"
+              style={{ width: "3rem", marginRight: 10 }}
+            />
+            <b>VINICIUSSSLIMA-UI</b>
+          </div>
+          <List>
             <ListItem
               onClick={() => {
-                history.push("/carrossel");
+                history.push("/");
                 closeDrawer();
               }}
             >
-              Carrossel
+              How to install
             </ListItem>
+            <List title="Components" collapsible>
+              <ListItem
+                onClick={() => {
+                  history.push("/carrossel");
+                  closeDrawer();
+                }}
+              >
+                Carrossel
+              </ListItem>
+            </List>
           </List>
-        </List>
+        </>
       </Drawer>
       <div className="content">{children}</div>
     </div>
