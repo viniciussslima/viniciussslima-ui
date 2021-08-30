@@ -31,19 +31,8 @@ const Base: FC<BaseProps> = ({ children }) => {
       </Navbar>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <>
-          <div
-            style={{
-              position: "absolute",
-              top: 10,
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={logo}
-              alt="logo"
-              style={{ width: "3rem", marginRight: 10 }}
-            />
+          <div className="logo-container">
+            <img className="logo" src={logo} alt="logo" />
             <b>VINICIUSSSLIMA-UI</b>
           </div>
           <List>
