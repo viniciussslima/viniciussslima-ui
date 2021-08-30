@@ -15,8 +15,15 @@ const props: Array<props> = [
     name: "qty",
     type: "number",
     description: "Quantity of carrossel items",
-    optional: true,
+    optional: false,
   },
+  {
+    name: "children",
+    type: "React.ReactNode | React.ReactNodeArray",
+    description: "Carrossel items",
+    optional: false,
+  },
+
   {
     name: "space",
     type: "number",
@@ -29,12 +36,6 @@ const props: Array<props> = [
     defaultValue: "0",
     description: "Timeout to pass carrossel items",
     optional: true,
-  },
-  {
-    name: "children",
-    type: "React.ReactNode | React.ReactNodeArray",
-    description: "Carrossel items",
-    optional: false,
   },
 ];
 
