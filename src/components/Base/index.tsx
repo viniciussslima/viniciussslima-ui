@@ -6,6 +6,7 @@ import { MdMenu } from "react-icons/md";
 import { useHistory } from "react-router-dom";
 
 import logo from "assets/logo.png";
+import ComponentsList from "components/ComponentsList";
 
 interface BaseProps {
   children: ReactNode;
@@ -44,16 +45,7 @@ const Base: FC<BaseProps> = ({ children }) => {
             >
               How to install
             </ListItem>
-            <List title="Components" collapsible>
-              <ListItem
-                onClick={() => {
-                  history.push("/carrossel");
-                  closeDrawer();
-                }}
-              >
-                Carrossel
-              </ListItem>
-            </List>
+            <ComponentsList closeDrawer={closeDrawer} />
           </List>
         </>
       </Drawer>
