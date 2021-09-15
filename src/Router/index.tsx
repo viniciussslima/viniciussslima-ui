@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
 import Base from "components/Base";
 import Install from "pages/Install";
 import CarrosselComponent from "pages/CarrosselComponent";
+import DrawerComponent from "pages/DrawerComponent";
 
 const Router: FC = () => {
   return (
@@ -13,6 +14,7 @@ const Router: FC = () => {
         <Switch>
           <Route exact path="/" component={Install} />
           <Route exact path="/carrossel" component={CarrosselComponent} />
+          <Route exact path="/drawer" component={DrawerComponent} />
           <Route render={() => <Redirect to="/"></Redirect>} />
         </Switch>
       </Base>

@@ -22,3 +22,13 @@
   width: 3rem;
   margin-right: 10px;
 }
+
+button {
+  background-color: #0ab2b2;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+}
