@@ -5,7 +5,7 @@ import { Carrossel, CarrosselItem } from "viniciussslima";
 import JsxExample from "components/JsxExample";
 import { minifyExample, example } from "./example";
 import Table from "components/Table";
-import props from "./props";
+import { carrosselProps, carrosselItemProps } from "./props";
 
 const CarrosselComponent: FC = () => {
   return (
@@ -44,8 +44,10 @@ const CarrosselComponent: FC = () => {
         </CarrosselItem>
       </Carrossel>
       <JsxExample jsx={example} reducedJsx={minifyExample} />
-      <h3>Props</h3>
-      <Table data={props} />
+      <h3>Carrossel Props</h3>
+      <Table data={carrosselProps} />
+      <h3>CarrosselItem Props</h3>
+      <Table data={carrosselItemProps} />
     </>
   );
 };

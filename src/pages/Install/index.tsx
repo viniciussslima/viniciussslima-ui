@@ -20,13 +20,10 @@ const Install = () => {
         <ListItem onClick={() => history.push("/carrossel")}>
           Carrossel
         </ListItem>
-        <ListItem>CarrosselItem</ListItem>
         <ListItem>Drawer</ListItem>
         <ListItem>List</ListItem>
-        <ListItem>ListItem</ListItem>
         <ListItem>Loading</ListItem>
         <ListItem>Menu</ListItem>
-        <ListItem>MenuItem</ListItem>
         <ListItem>Modal</ListItem>
         <ListItem>Navbar</ListItem>
         <ListItem>Paginator</ListItem>

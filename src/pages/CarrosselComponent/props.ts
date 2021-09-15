@@ -1,4 +1,4 @@
-const props: Array<props> = [
+const carrosselProps: Array<props> = [
   {
     name: "height",
     type: "number",
@@ -39,4 +39,19 @@ const props: Array<props> = [
   },
 ];
 
-export default props;
+const carrosselItemProps: Array<props> = [
+  {
+    name: "children",
+    type: "React.ReactNode",
+    description: "Carrossel item",
+    optional: false,
+  },
+  {
+    name: "style",
+    type: "React.CSSProperties",
+    description: "Style of carrossel item",
+    optional: true,
+  },
+];
+
+export { carrosselProps, carrosselItemProps };
