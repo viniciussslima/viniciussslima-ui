@@ -22,7 +22,7 @@ const ComponentsList: FC<ComponentsListProps> = ({ closeDrawer }) => {
       </ListItem>
       <ListItem
         onClick={() => {
-          history.push("/Drawer");
+          history.push("/drawer");
           if (closeDrawer) closeDrawer();
         }}
       >
@@ -30,13 +30,20 @@ const ComponentsList: FC<ComponentsListProps> = ({ closeDrawer }) => {
       </ListItem>
       <ListItem
         onClick={() => {
-          history.push("/List");
+          history.push("/list");
           if (closeDrawer) closeDrawer();
         }}
       >
         List
       </ListItem>
-      <ListItem>Loading</ListItem>
+      <ListItem
+        onClick={() => {
+          history.push("/loading");
+          if (closeDrawer) closeDrawer();
+        }}
+      >
+        Loading
+      </ListItem>
       <ListItem>Menu</ListItem>
       <ListItem>Modal</ListItem>
       <ListItem>Navbar</ListItem>

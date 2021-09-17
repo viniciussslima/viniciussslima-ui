@@ -7,6 +7,7 @@ import Install from "pages/Install";
 import CarrosselComponent from "pages/CarrosselComponent";
 import DrawerComponent from "pages/DrawerComponent";
 import ListComponent from "pages/ListComponent";
+import LoadingComponent from "pages/LoadingComponent";
 
 const Router: FC = () => {
   return (
@@ -17,6 +18,7 @@ const Router: FC = () => {
           <Route exact path="/carrossel" component={CarrosselComponent} />
           <Route exact path="/drawer" component={DrawerComponent} />
           <Route exact path="/list" component={ListComponent} />
+          <Route exact path="/loading" component={LoadingComponent} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>
       </Base>
