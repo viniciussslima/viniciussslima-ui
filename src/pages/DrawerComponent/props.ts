@@ -24,6 +24,12 @@ const props: Array<props> = [
     optional: false,
   },
   {
+    name: "children",
+    type: "React.ReactNode",
+    description: "The content of the drawer",
+    optional: false,
+  },
+  {
     name: "containerStyle",
     type: "React.CSSProperties",
     description: "The style of the container",
@@ -58,12 +64,6 @@ const props: Array<props> = [
     type: "boolean",
     description: "If true, the backdrop will not close the drawer",
     optional: true,
-  },
-  {
-    name: "children",
-    type: "React.ReactNode",
-    description: "The content of the drawer",
-    optional: false,
   },
 ];
 
