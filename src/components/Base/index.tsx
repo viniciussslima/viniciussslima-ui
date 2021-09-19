@@ -43,6 +43,14 @@ const Base: FC<BaseProps> = ({ children }) => {
                 closeDrawer();
               }}
             >
+              About
+            </ListItem>
+            <ListItem
+              onClick={() => {
+                history.push("/install");
+                closeDrawer();
+              }}
+            >
               How to install
             </ListItem>
             <ComponentsList closeDrawer={closeDrawer} />
