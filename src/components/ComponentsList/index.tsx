@@ -44,7 +44,14 @@ const ComponentsList: FC<ComponentsListProps> = ({ closeDrawer }) => {
       >
         Loading
       </ListItem>
-      <ListItem>Menu</ListItem>
+      <ListItem
+        onClick={() => {
+          history.push("/menu");
+          if (closeDrawer) closeDrawer();
+        }}
+      >
+        Menu
+      </ListItem>
       <ListItem>Modal</ListItem>
       <ListItem>Navbar</ListItem>
       <ListItem>Paginator</ListItem>
