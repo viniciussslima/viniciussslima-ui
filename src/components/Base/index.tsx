@@ -32,7 +32,13 @@ const Base: FC<BaseProps> = ({ children }) => {
       </Navbar>
       <Drawer open={isDrawerOpen} onClose={closeDrawer}>
         <>
-          <div className="logo-container">
+          <div
+            className="logo-container"
+            onClick={() => {
+              history.push("/");
+              closeDrawer();
+            }}
+          >
             <img className="logo" src={logo} alt="logo" />
             <b>VINICIUSSSLIMA-UI</b>
           </div>
